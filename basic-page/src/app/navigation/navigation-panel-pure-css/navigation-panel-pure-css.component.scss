@@ -1,0 +1,24 @@
+img {
+  width: 50px;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0px;
+
+  li {
+    float: left;
+    text-align: center;
+    padding: 16px;
+  }
+}
+
+.settings {
+  width: 25px;
+}
+
+.account-managment {
+  display: inline-block;
+  right: 0;
+}
