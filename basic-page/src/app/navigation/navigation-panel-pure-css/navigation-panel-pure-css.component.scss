@@ -1,24 +1,44 @@
-img {
-  width: 50px;
+.nav-container {
+  //height: 60px;
+  border: solid black 1px;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
-ul {
-  list-style-type: none;
+.nav-container *, .nav-right * {
   display: inline-block;
-  margin: 0px;
+  vertical-align: middle;
+}
 
-  li {
-    float: left;
-    text-align: center;
-    padding: 16px;
-  }
+.nav-left {
+  //float: left;
+}
+
+.logo {
+  width: 50px;
+  //float: left;
+  display: inline-block;
+  //margin: 5px;
+}
+
+span {
+  display: inline-block;
+  margin: auto 10px;
+}
+
+.nav-right {
+  //float: right;
+  //display: inline-block;
 }
 
 .settings {
   width: 25px;
 }
 
-.account-managment {
-  display: inline-block;
-  right: 0;
+.saved {
+  width: 25px;
 }

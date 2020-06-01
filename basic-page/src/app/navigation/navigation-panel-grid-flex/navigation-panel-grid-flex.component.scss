@@ -1,0 +1,39 @@
+.nav-container {
+  margin-top: 5px;
+  border: solid black 1px;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+
+  img {
+    width: 50px;
+  }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    padding: 0 10px;
+  }
+}
+
+.nav-right {
+  grid-column: -2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 10px;
+
+  img {
+    width: 25px;
+    padding-right: 10px;
+  }
+}
+
+span {
+  align-self: center;
+}
