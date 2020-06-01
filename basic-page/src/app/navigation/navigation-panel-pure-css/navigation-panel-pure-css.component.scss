@@ -1,12 +1,6 @@
 .nav-container {
-  //height: 60px;
   border: solid black 1px;
-
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  position: relative;
 }
 
 .nav-container *, .nav-right * {
@@ -14,15 +8,9 @@
   vertical-align: middle;
 }
 
-.nav-left {
-  //float: left;
-}
-
 .logo {
   width: 50px;
-  //float: left;
   display: inline-block;
-  //margin: 5px;
 }
 
 span {
@@ -31,8 +19,9 @@ span {
 }
 
 .nav-right {
-  //float: right;
-  //display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 25%;
 }
 
 .settings {
@@ -41,4 +30,5 @@ span {
 
 .saved {
   width: 25px;
+  padding-right: 10px;
 }
