@@ -1,0 +1,38 @@
+.nav-container {
+  margin-top: 5px;
+  border: solid black 1px;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 50px;
+  }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    padding: 0 10px;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 10px;
+  margin-left: auto;
+
+  img {
+    width: 25px;
+    padding-right: 10px;
+  }
+}
+
+span {
+  align-self: center;
+}
