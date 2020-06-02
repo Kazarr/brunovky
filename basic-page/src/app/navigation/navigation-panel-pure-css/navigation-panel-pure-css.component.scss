@@ -18,9 +18,20 @@ span {
   margin: auto 10px;
 }
 
+.nav-middle {
+  width: auto;
+}
+
+input {
+  width: 200px;
+  position: absolute;
+  left: 47.75%;
+  top: 25%;
+}
+
 .nav-right {
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 25%;
 }
 

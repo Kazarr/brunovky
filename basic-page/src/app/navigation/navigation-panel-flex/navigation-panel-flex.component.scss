@@ -20,6 +20,16 @@
   }
 }
 
+.nav-middle {
+  display: flex;
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+input {
+  width: 200px;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
