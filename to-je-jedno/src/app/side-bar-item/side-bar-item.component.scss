@@ -1,0 +1,30 @@
+
+.item-wrapper {
+  display: flow-root;
+  background-color: inherit;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.item-number {
+  margin-right: 8px;
+}
+
+.item-date {
+  float: right;
+  font-style: italic;
+}
+
+.item-number, .item-date {
+  font-size: 14px;
+}
+
+.item-sum {
+  float: right;
+  margin: 4px auto;
+  font-weight: bold;
+}

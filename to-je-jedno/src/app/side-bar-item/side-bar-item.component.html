@@ -1,0 +1,9 @@
+<div class="item-wrapper">
+  <h3>{{item.name}}</h3>
+  <div>
+    <span class="item-number">{{item.id}}</span>
+    <span class="item-date">{{item.itemDate | date: 'dd.MM.yyyy'}}</span>
+  </div>
+  <span class="item-sum">{{item.sum | currency:'EUR':'symbol':'1.2-2'}}</span>
+</div>
+

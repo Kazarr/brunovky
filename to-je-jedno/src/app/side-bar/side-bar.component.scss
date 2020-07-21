@@ -1,0 +1,15 @@
+aside {
+  height: 100%;
+}
+
+.items {
+  overflow: auto;
+  height: 100%;
+}
+
+.items > * {
+  background-color: #4bb084;
+}
+.items> *:nth-child(2n) {
+  background-color: #92c854;
+}

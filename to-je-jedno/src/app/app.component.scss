@@ -1,0 +1,19 @@
+.nav-wrapper {
+  //height: 10vh;
+  height: 58px;
+  padding: 8px 8px 0;
+}
+
+.shell-wrapper {
+  height: calc(100% - 58px - 58px);
+  min-height: 200px;
+  padding-left: 8px;
+  padding-right: 8px;
+  //height: calc(100vh - 52px - 52px - 8px - 8px);
+}
+
+.footer-wrapper {
+  //height: 10vh;
+  height: 58px;
+  padding: 0 8px 8px ;
+}
