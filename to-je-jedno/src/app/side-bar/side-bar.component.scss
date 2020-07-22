@@ -1,10 +1,18 @@
 aside {
+  position: relative;
   height: 100%;
+  padding-top: 38px;
+}
+
+button {
+  position: absolute;
+  top: 0;
 }
 
 .items {
   overflow: auto;
   height: 100%;
+  //height: calc(100% - 38px);
 }
 
 .items > * {

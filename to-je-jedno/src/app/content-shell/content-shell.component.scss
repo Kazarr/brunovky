@@ -1,8 +1,7 @@
-:host {
-  display: block;
-  height: 100%;
-
-}
+//:host {
+//  display: block;
+//  height: 100%;
+//}
 
 .side-bar-wrapper {
   float: left;
@@ -12,9 +11,8 @@
 }
 
 .content-wrapper {
-  display: inline-block;
+  //display: inline-block;
   background-color: aqua;
-  width: 75%;
   height: 100%;
 }
 
