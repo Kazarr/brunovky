@@ -1,0 +1,15 @@
+<form [formGroup]="itemForm">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="date">Some Date</label>
+    <input id="date" type="date" formControlName="date">
+  </div>
+  <div>
+    <label for="sum">Sum</label>
+    <input id="sum" type="number" formControlName="sum">
+  </div>
+  <button (click)="onClick()" [disabled]="!itemForm.valid">Uložiť</button>
+</form>

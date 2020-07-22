@@ -12,6 +12,13 @@ import { SideBarItemComponent } from './side-bar-item/side-bar-item.component';
 import { ContentShellComponent } from './content-shell/content-shell.component';
 import {registerLocaleData} from "@angular/common";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {itemsReducer} from "./items-state/items.reducer";
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import {ItemsEffects} from "./items-state/items.effects";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 registerLocaleData(localeSK);
 
@@ -23,12 +30,19 @@ registerLocaleData(localeSK);
     ContentComponent,
     FooterComponent,
     SideBarItemComponent,
-    ContentShellComponent
+    ContentShellComponent,
+    ItemDetailComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({itemState: itemsReducer}),
+    EffectsModule.forRoot([ItemsEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+    }),
+    ReactiveFormsModule,
   ],
   providers: [{provide: LOCALE_ID, useValue: 'sk'}],
   bootstrap: [AppComponent]

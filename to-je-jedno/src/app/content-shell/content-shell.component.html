@@ -1,6 +1,7 @@
 <div class="side-bar-wrapper">
-  <app-side-bar></app-side-bar>
+  <app-side-bar (clicked)="handle($event)"></app-side-bar>
 </div>
 <div class="content-wrapper">
-  <app-content></app-content>
+<!--  <app-content></app-content>-->
+  <app-item-detail [item]="clickedItem"></app-item-detail>
 </div>
