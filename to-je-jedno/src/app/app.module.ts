@@ -19,6 +19,7 @@ import {ItemsEffects} from "./items-state/items.effects";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { DetailDateSumComponent } from './detail-date-sum/detail-date-sum.component';
 
 registerLocaleData(localeSK);
 
@@ -31,7 +32,8 @@ registerLocaleData(localeSK);
     FooterComponent,
     SideBarItemComponent,
     ContentShellComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    DetailDateSumComponent
   ],
   imports: [
     NgbModule,

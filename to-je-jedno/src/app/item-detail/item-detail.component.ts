@@ -15,8 +15,10 @@ export class ItemDetailComponent implements OnInit, OnChanges {
 
   itemForm = this.fb.group({
     name: ['', Validators.required],
-    date: [''],
-    sum: [''],
+    dateSum: {
+      date: [''],
+      sum: [''],
+    }
   })
 
   constructor(private fb: FormBuilder) {
@@ -31,8 +33,10 @@ export class ItemDetailComponent implements OnInit, OnChanges {
 
       this.itemForm.setValue({
         name: this.item.name,
-        date: itemDate,
-        sum: this.item.sum
+        dateSum: {
+          date: itemDate,
+          sum: this.item.sum
+        }
       });
     }
   }
