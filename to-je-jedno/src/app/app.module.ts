@@ -20,6 +20,7 @@ import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {DetailDateSumComponent} from './detail-date-sum/detail-date-sum.component';
 import {DirectivesModule} from "./directives/directives.module";
+import {PipesModule} from "./pipes/pipes.module";
 
 registerLocaleData(localeSK);
 
@@ -45,6 +46,7 @@ registerLocaleData(localeSK);
       maxAge: 25, // Retains last 25 states
     }),
     ReactiveFormsModule,
+    PipesModule,
   ],
   providers: [{provide: LOCALE_ID, useValue: 'sk'}],
   bootstrap: [AppComponent]
