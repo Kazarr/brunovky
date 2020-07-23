@@ -1,25 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule} from '@angular/platform-browser';
 import {LOCALE_ID, NgModule} from '@angular/core';
 import localeSK from '@angular/common/locales/sk';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component';
-import { SideBarItemComponent } from './side-bar-item/side-bar-item.component';
-import { ContentShellComponent } from './content-shell/content-shell.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {NavBarComponent} from './nav-bar/nav-bar.component';
+import {SideBarComponent} from './side-bar/side-bar.component';
+import {ContentComponent} from './content/content.component';
+import {FooterComponent} from './footer/footer.component';
+import {SideBarItemComponent} from './side-bar-item/side-bar-item.component';
+import {ContentShellComponent} from './content-shell/content-shell.component';
 import {registerLocaleData} from "@angular/common";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {itemsReducer} from "./items-state/items.reducer";
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
 import {ItemsEffects} from "./items-state/items.effects";
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ItemDetailComponent } from './item-detail/item-detail.component';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { DetailDateSumComponent } from './detail-date-sum/detail-date-sum.component';
+import {DetailDateSumComponent} from './detail-date-sum/detail-date-sum.component';
+import {DirectivesModule} from "./directives/directives.module";
 
 registerLocaleData(localeSK);
 
@@ -36,6 +37,7 @@ registerLocaleData(localeSK);
     DetailDateSumComponent
   ],
   imports: [
+    DirectivesModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,
@@ -49,4 +51,5 @@ registerLocaleData(localeSK);
   providers: [{provide: LOCALE_ID, useValue: 'sk'}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

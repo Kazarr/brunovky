@@ -29,10 +29,12 @@ export class DetailDateSumComponent implements OnInit, ControlValueAccessor {
   }
 
   writeValue(obj: any) {
-    this.dateSumForm.patchValue({
-      date: obj.date,
-      sum: obj.sum
-    })
+    if (obj) {
+      this.dateSumForm.patchValue({
+        date: obj.date,
+        sum: obj.sum
+      })
+    }
   }
 
 }

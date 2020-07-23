@@ -1,8 +1,8 @@
 <form [formGroup]="itemForm">
   <div>
     <label for="name">Name</label>
-    <input id="name" type="text" formControlName="name">
+    <input class="form-control-sm" id="name" type="text" formControlName="name">
   </div>
   <app-detail-date-sum formControlName="dateSum"></app-detail-date-sum>
-  <button (click)="onClick()" [disabled]="!itemForm.valid">Uložiť</button>
+  <button class="btn btn-primary" (click)="save()" [disabled]="!itemForm.valid">Uložiť</button>
 </form>

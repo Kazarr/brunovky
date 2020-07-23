@@ -16,14 +16,23 @@ export class SideBarComponent implements OnInit {
   @Output()
   clicked = new EventEmitter<SideBarItem>();
 
-  constructor(private store: Store<{itemState: {items: SideBarItem[]}}>) { this.store.dispatch(get()); }
+  constructor(
+    private store: Store<{itemState: {items: SideBarItem[]}}>
+  ) {
+    this.store.dispatch(get());
+  }
 
   ngOnInit() {
     this.store.select(itemsSelector).subscribe(next => this.items = next)
   }
 
   onItemClick(value: SideBarItem) {
-    this.clicked.emit(value);
+    if (!value) {
+      const empty = {id:0, name:'', sum: 0, itemDate: new Date()};
+      this.clicked.emit(empty);
+    } else {
+      this.clicked.emit(value);
+    }
   }
 }
 

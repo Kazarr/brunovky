@@ -14,10 +14,15 @@ export class SideBarItemService {
     {id: 4, name: 'kapraď', sum: 600, itemDate: new Date('2020-03-15')},
     {id: 5, name: 'motorko', sum: 105, itemDate: new Date('2020-05-11')},
     {id: 6, name: 'dina nie dina ale tina', sum: 3000, itemDate: new Date('2020-07-20')}
-  ]
+  ];
 
   get items$(): Observable<SideBarItem[]> {
    return of(this.items);
+  }
+
+  addItem(item: SideBarItem): Observable<SideBarItem> {
+    this.items = [...this.items, item];
+    return of(item);
   }
 
   constructor() { }
