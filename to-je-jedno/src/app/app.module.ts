@@ -6,7 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {SideBarComponent} from './side-bar/side-bar.component';
-import {ContentComponent} from './content/content.component';
 import {FooterComponent} from './footer/footer.component';
 import {SideBarItemComponent} from './side-bar-item/side-bar-item.component';
 import {ContentShellComponent} from './content-shell/content-shell.component';
@@ -29,7 +28,6 @@ registerLocaleData(localeSK);
     AppComponent,
     NavBarComponent,
     SideBarComponent,
-    ContentComponent,
     FooterComponent,
     SideBarItemComponent,
     ContentShellComponent,

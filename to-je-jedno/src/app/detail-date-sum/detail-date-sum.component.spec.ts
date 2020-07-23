@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailDateSumComponent } from './detail-date-sum.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 describe('DetailDateSumComponent', () => {
   let component: DetailDateSumComponent;
@@ -8,7 +9,8 @@ describe('DetailDateSumComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailDateSumComponent ]
+      declarations: [ DetailDateSumComponent ],
+      imports: [ReactiveFormsModule]
     })
     .compileComponents();
   }));

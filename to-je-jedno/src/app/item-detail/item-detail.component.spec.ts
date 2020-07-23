@@ -1,16 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ItemDetailComponent } from './item-detail.component';
+import {ItemDetailComponent} from './item-detail.component';
+import { ReactiveFormsModule} from "@angular/forms";
+import {DetailDateSumComponent} from "../detail-date-sum/detail-date-sum.component";
+import {provideMockStore} from "@ngrx/store/testing";
 
 describe('ItemDetailComponent', () => {
   let component: ItemDetailComponent;
   let fixture: ComponentFixture<ItemDetailComponent>;
+  const initialState = {items: []};
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ItemDetailComponent ]
+      declarations: [
+        ItemDetailComponent,
+        DetailDateSumComponent
+      ],
+      imports: [ReactiveFormsModule],
+      providers: [provideMockStore({initialState})]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

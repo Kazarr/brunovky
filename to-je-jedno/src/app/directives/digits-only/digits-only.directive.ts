@@ -6,14 +6,7 @@ import {NgControl} from "@angular/forms";
 })
 export class DigitsOnlyDirective {
 
-  constructor(private control: NgControl, private element: ElementRef) { }
-
-  //@HostListener('input', ['$event.target.value'])
-  // updateInput(value: any) {
-  //   const newValue = value.replace(/\D/g, '');
-  //   console.log(value, newValue);
-  //   this.control.control.patchValue(newValue);
-  // }
+  constructor(private element: ElementRef) { }
 
   @HostListener('input', ['$event.target.value'])
   updateInput(value: any) {
